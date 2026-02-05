@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = +prompt("Nhập số phần tử của mảng (n):");
+
+        if (n < 0) {
+            console.log("Số lượng phần tử không hợp lệ");
+        }
+        else if (n === 0) {
+            console.log("Mảng không có phần tử");
+        }
+        else {
+            let arr = [];
+            let count = 0;
+
+            for (let i = 0; i < n; i++) {
+                let value = +prompt("Nhập phần tử thứ " + (i + 1));
+                arr.push(value);
+
+                if (Number.isInteger(value) && value < 0) {
+                    count++;
+                }
+            }
+
+            console.log(arr);
+            console.log(count);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = +prompt("Nhập số phần tử của mảng (n):");
+
+        if (n <= 0) {
+            console.log("Không có ký tự số");
+        } else {
+            let arr = [];
+            let result = "";
+
+            for (let i = 0; i < n; i++) {
+                let ch = prompt("Nhập ký tự thứ " + (i + 1));
+                arr.push(ch);
+
+                if (ch >= '0' && ch <= '9') {
+                    result += ch + " ";
+                }
+            }
+
+            if (result === "") {
+                console.log("Không có ký tự số");
+            } else {
+                console.log(result);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let input = prompt("Nhập các số nguyên, cách nhau bằng dấu phẩy (,)");
+
+        if (input === null || input.trim() === "") {
+            console.log("Không có số lớn nhất");
+        } else {
+            let arr = input.split(",");
+
+            if (arr.length === 0) {
+                console.log("Không có số lớn nhất");
+            } else {
+                let max = arr[0];
+                let index = 0;
+
+                for (let i = 1; i < arr.length; i++) {
+                    if (arr[i] > max) {
+                        max = arr[i];
+                        index = i;
+                    }
+                }
+
+                console.log("Số lớn nhất:", max);
+                console.log("Vị trí:", index);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
